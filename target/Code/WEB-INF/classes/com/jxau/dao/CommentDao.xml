@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxau.dao.CommentDao">
+    <insert id="saveComment" parameterType="com.jxau.domain.Comment">
+        insert into comment(user_id,movice_id,content,time) values(#{user_id},#{movice_id},#{content},#{time})
+    </insert>
+    <select id="countComments" resultType="java.lang.Integer">
+        select count(*) from comment
+    </select>
+    <select id="findAll" resultType="com.jxau.domain.Comment">
+        select * from comment
+    </select>
+    <delete id="deleteComment" parameterType="java.lang.Integer">
+        delete from comment where cid=#{cid}
+    </delete>
+</mapper>

@@ -1,0 +1,507 @@
+/*header*/
+.header{
+    background-color: rgba(24,40,66,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.header__wrap{
+    width: 100%;
+    height: 80px;
+    position: relative;
+
+}
+.header__logo{
+    background: url("../images/Code_House.png")left center no-repeat;
+    width: 160px;
+    height: 40px;
+    background-size: 40px 40px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    text-indent: 50px;
+    /*text-indent文字缩进距离为logo图片加文字大小*/
+    line-height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    left: 20px;
+}
+
+.header__nav{
+    position: absolute;
+    height: 40px;
+    right: 30px;
+    top: 50%;
+    margin-top: -20px;
+}
+.header__nav__item{
+    color: #fff;
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    float: left;
+}
+
+.header__nav__item:hover{
+    color: #f01400;
+}
+/*.header__nav__item__status__active::after{*/
+/*content: '  ';*/
+/*display: block;*/
+/*width: 100%;*/
+/*height: 2px;*/
+/*position: absolute;*/
+/*background-color: #f01400;*/
+/*left: 0;*/
+/*bottom:0;*/
+/*}*/
+.header__nav__item--study-now{
+    background: #f00;
+    text-align: center;
+    width: 94px;
+    border-radius: 3px;
+    padding: 0;
+    margin-left: 40px;
+}
+.header__nav__item--study-now:hover{
+    box-shadow:0px 0px 10px #f06;
+    transition: all .5s;
+    color: white;
+}
+
+.header_nav_tip{
+    width: 48px;
+    height: 2px;
+    position: absolute;
+    background-color: #f00;
+    bottom: 0;
+    left: 0;
+    transition: all .5s;
+    margin-left: 40px;
+}
+
+/*container*/
+.container{
+    width: 1200px;
+    height: 640px;
+}
+
+/*screen-1*/
+.screen-1{
+    height: 640px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+
+}
+.screen-1__practice-courses{
+    background: url("../images/sc1.jpg")no-repeat center;
+    height: 640px;
+    background-size: cover;
+}
+.screen-1__heading{
+    position: absolute;
+    width: 336px;
+    font-size: 42px;
+    top: 240px;
+    left: 50%;
+    margin-left: -168px;
+
+}
+.screen-1__heading-descrip{
+    position: absolute;
+    z-index: 1;
+    width: 336px;
+    left: 50%;
+    margin-left: -168px;
+    text-align: center;
+    top: 318px;
+}
+
+/*screen-2*/
+.screen-2{
+    width: 1200px;
+    height: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+.screen-2__heading{
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 90px;
+}
+.screen-2__sub-heading-tip{
+    height: 3px;
+    width: 54px;
+    background: #f00;
+    margin: 32px auto;
+}
+.screen-2__sub-heading{
+    margin: 22px auto;
+    padding: 0;
+    text-align: center;
+}
+.screen-2__banner{
+    position: relative;
+}
+.screen-2__banner_i_1{
+    background-image: url("../images/sc2.png");
+    width: 750px;
+    height: 360px;
+    position: absolute;
+    left: 50%;
+    margin-left: -375px;
+    margin-top: 110px;
+}
+.screen-2__banner_i_2{
+    background: url("../images/sc2-1.png")center no-repeat;
+    width: 275px;
+    height: 380px;
+    position: absolute;
+    left: 50%;
+    margin-left: -137px;
+    z-index: 2;
+    margin-top: 90px;
+}
+.screen-2__banner_i_3{
+    background-image: url("../images/sc2-2.png");
+    width: 266px;
+    height: 204px;
+    position: absolute;
+    right: 370px;
+    top: 166px;
+    z-index: 1;
+}
+
+/*screen-3*/
+.screen-3{
+    height: 640px;
+    background-color: #2b333b;
+    position: relative;
+}
+.screen-3__icon{
+    background: url("../images/sc3.png")no-repeat center;
+    height: 632px;
+    width: 570px;
+    position: relative;
+    margin-left: 120px;
+    z-index: 2;
+    background-size: cover;
+    float: left;
+}
+.screen-3__content{
+    width: 630px;
+    height: 640px;
+    float: left;
+}
+.screen-3__content__heading{
+    float: left;
+    font-size: 36px;
+    margin-left: 200px;
+    width: 396px;
+    margin-top: 230px;
+    color: #fff;
+}
+.screen-3__content__tip{
+    height: 2px;
+    width: 50px;
+    margin-left: 200px;
+    background-color: #f01400;
+    position: absolute;
+    top: 294px;
+}
+.screen-3__content__subheading{
+    color: white;
+    position: absolute;
+    top: 324px;
+    margin-left: 200px;
+    font-size: 14px;
+    width: 512px;
+}
+.screen-3__content__items{
+    position: absolute;
+    margin-top: 456px;
+    margin-left: 200px;
+    height: 72px;
+    width: 512px;
+    line-height: 72px;
+
+    /*呼吸灯效果*/
+    /* IE10、Firefox and Opera，IE9以及更早的版本不支持 */
+    animation-name: breath;                         /* 动画名称 */
+    animation-duration: 3s;                         /* 动画时长3秒 */
+    animation-timing-function: linear;         /* 动画速度曲线：以低速开始和结束 */
+    animation-iteration-count: 3;            /* 播放次数：无限 */
+
+    /* Safari and Chrome */
+    -webkit-animation-name: breath;                 /* 动画名称 */
+    -webkit-animation-duration: 2s;                 /* 动画时长3秒 */
+    -webkit-animation-timing-function: linear; /* 动画速度曲线：以低速开始和结束 */
+    -webkit-animation-iteration-count: 2;    /* 播放次数：无限 */
+}
+@keyframes breath {
+    from { opacity: 0.1; }                          /* 动画开始时的不透明度 */
+    50%  { opacity:   0.5; }                          /* 动画50% 时的不透明度 */
+    to   { opacity: 1; }                          /* 动画结束时的不透明度 */
+}
+
+@-webkit-keyframes breath {
+    from { opacity: 0.1; }                          /* 动画开始时的不透明度 */
+    50%  { opacity:   0.5; }                          /* 动画50% 时的不透明度 */
+    to   { opacity: 1; }                          /* 动画结束时的不透明度 */
+}
+.screen-3__content__items-1{
+    color: #2294ff;
+    border-radius: 50%;
+    border: 4px solid #1f5975 ;
+    height: 74px;
+    width: 74px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 14px;
+}
+.screen-3__content__items-2{
+    color: #7888fd;
+    border-radius: 50%;
+    border: 4px solid #7888fd ;
+    height: 74px;
+    width: 74px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 14px;
+}
+.screen-3__content__items-3{
+    color: #ff6060;
+    border-radius: 50%;
+    border: 4px solid #6b4146 ;
+    height: 74px;
+    width: 74px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 14px;
+}
+.screen-3__content__items-4{
+    color: #25c7e5;
+    border-radius: 50%;
+    border: 4px solid #29535f ;
+    height: 74px;
+    width: 74px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 14px;
+}
+.screen-3__content__items-5{
+    color: #90bd4b;
+    border-radius: 50%;
+    border: 4px solid #3e4e40 ;
+    height: 74px;
+    width: 74px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 14px;
+}
+
+/*screen-4*/
+.screen-4{
+    background-color: #f5f3f7;
+    height: 640px;
+}
+.screen-4__heading{
+    font-size: 42px;
+    text-align: center;
+    padding-top: 89px;
+}
+.screen-4__tips{
+    height: 2px;
+    width: 50px;
+    margin: 0 auto;
+    background-color: #f01400;
+    margin-top: 33px;
+}
+.screen-4__subheading{
+    width: 1200px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.screen-4__items{
+    margin: 80px auto;
+    width: 1200px;
+    height: 300px;
+}
+
+.screen-4__items-wrap1,
+.screen-4__items-wrap2,
+.screen-4__items-wrap3,
+.screen-4__items-wrap4{
+    width: 300px;
+    height: 400px;
+    float: left;
+    text-align: center;
+}
+
+.screen-4__items-1-icon{
+    background: url("../images/sc4-1.png")no-repeat center;
+    height: 72px;
+    margin-bottom: 24px;
+}
+
+.screen-4__items-2-icon{
+    background: url("../images/sc4-2.png")no-repeat center;
+    height: 72px;
+    margin-bottom: 24px;
+}
+
+.screen-4__items-3-icon{
+    background: url("../images/sc4-3.png")no-repeat center;
+    height: 72px;
+    margin-bottom: 24px;
+}
+
+.screen-4__items-4-icon{
+    background: url("../images/sc4-4.png")no-repeat center;
+    height: 72px;
+    margin-bottom: 24px;
+}
+
+
+
+
+/*screen-5*/
+.screen-5{
+    width:100%;
+    height: 640px;
+    background-image: url("../images/sc5.jpg");
+    background-size: cover;
+    position: relative;
+}
+.screen-5_icon{
+    background-image: url("../images/sc5-1.png");
+    width: 200px;
+    height: 200px;
+    top: 98px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+}
+.screen-5_heading{
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    top:358px;
+    left: 50%;
+    margin-left: -300px;
+}
+.screen-5_tip{
+    height: 2px;
+    width: 50px;
+    left: 50%;
+    margin-left: -25px;
+    background-color: #fff;
+    position: absolute;
+    top: 460px;
+}
+.screen-5_subheading{
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: 480px;
+    left: 50%;
+    margin-left: -344px;
+}
+
+/*others*/
+.screen-others{
+    background-color: #fff;
+    height: 200px;
+    overflow: hidden;
+}
+.screen-others_btn{
+    display: block;
+    border: 1px solid #707070;
+    width: 238px;
+    height: 56px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 3px;
+    color: black;
+}
+.screen-others_btn:hover{
+    box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+    /*给即刻学习体验按钮添加环绕四周阴影,形如'0px 0px 10px',如果0px有值则为按钮有下侧有效果*/
+    transition: all .5s;
+    /*按钮过渡渐变动画*/
+    color: #717171;
+}
+
+/*footer*/
+.footer{
+    background-color: #000;
+    height: 108px;
+    position: relative;
+
+}
+.footer_link{
+    position: absolute;
+    top: 30px;
+    margin-left: 50%;
+    left: -348px;
+    color: #8fc0c4;
+}
+.footer_link a{
+    color: white;
+    margin-right:36px;
+    font-size: 12px;
+}
+.footer_link a:hover{
+    color: #f01400;
+}
+.footer p{
+    color: white;
+    position: absolute;
+    top: 60px;
+    font-size: 14px;
+    color: #787d82;
+    left: 50%;
+    margin-left: -244px;
+}
+
+/*outline*/
+.outline{
+    width: 90px;
+    height: 180px;
+    bottom: 120px;
+    box-shadow: 0px 4px 12px 0px rgba(7, 17, 27, 0.1);
+    /*outline阴影*/
+    border-radius: 3px;
+    position: fixed;
+    right: 0;
+    background-color: white;
+}
+.outline__nav{
+    text-align: center;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    color: black;
+
+}
+.outline__nav:hover{
+    color: #f01400;
+}
+
+

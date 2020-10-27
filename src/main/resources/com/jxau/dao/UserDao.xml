@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxau.dao.UserDao">
+    <!--查询所有用户-->
+    <select id="findAll" resultType="com.jxau.domain.User" >
+        select * from user
+    </select>
+    <select id="findByEmail" resultType="com.jxau.domain.User" parameterType="java.lang.String">
+        select * from user where email=#{email}
+    </select>
+    <insert id="saveUser" parameterType="com.jxau.domain.User">
+        insert into user(email,password,sex,username) values(#{email},#{password},#{sex},#{username})
+    </insert>
+    <select id="findUser" resultType="com.jxau.domain.User" parameterType="com.jxau.domain.User">
+        select * from user where email=#{email} and password=#{password}
+    </select>
+    <select id="findAdmin" resultType="com.jxau.domain.User" parameterType="com.jxau.domain.User">
+        select * from user where email=#{email} and password=#{password} and degree>=1
+    </select>
+    <select id="countUsers" resultType="java.lang.Integer">
+        select count(*) from user
+    </select>
+    <select id="findById" resultType="com.jxau.domain.User" parameterType="java.lang.Integer">
+        select * from user where uid = #{id}
+    </select>
+    <update id="updateAdmin" parameterType="com.jxau.domain.User">
+        update user set username=#{username},phone=#{phone},motto=#{motto} where uid=#{uid}
+    </update>
+    <update id="updatePass" parameterType="com.jxau.domain.User">
+        update user set password=#{password} where email=#{email}
+    </update>
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from user where uid=#{uid}
+    </delete>
+    <update id="setAdmin" parameterType="java.lang.Integer">
+        update user set degree=1 where uid=#{uid}
+    </update>
+    <update id="cancelAdmin" parameterType="java.lang.Integer">
+        update user set degree=0 where uid=#{uid}
+    </update>
+</mapper>

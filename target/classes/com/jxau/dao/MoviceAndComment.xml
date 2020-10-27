@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxau.dao.MoviceAndCommentDao">
+    <select id="findComment" resultType="com.jxau.domain.MoviceAndComment" parameterType="java.lang.Integer">
+        SELECT mid,username,mname,movice_path,movice_cover,content,c.time FROM movice,comment c,user
+         WHERE mid=movice_id AND user_id=uid HAVING mid=#{mid}
+    </select>
+</mapper>

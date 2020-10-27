@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxau.dao.MoviceDao">
+    <select id="showMovice" resultType="com.jxau.domain.Movice">
+        select * from movice where recommend=1
+    </select>
+    <select id="playMovice" resultType="com.jxau.domain.Movice" parameterType="java.lang.Integer">
+        select * from movice where mid=#{id}
+    </select>
+    <select id="findMovice" resultType="com.jxau.domain.Movice" parameterType="java.lang.String">
+        select * from movice where mname like #{c}
+    </select>
+    <select id="findAllMovice" resultType="com.jxau.domain.Movice">
+        select * from movice
+    </select>
+    <select id="findCover" resultType="com.jxau.domain.Movice">
+        select * from movice where recommend=2
+    </select>
+    <select id="countMovices" resultType="java.lang.Integer">
+        select count(*) from movice
+    </select>
+    <select id="findAll" resultType="com.jxau.domain.Movice">
+        select * from movice
+    </select>
+    <delete id="deleteMovice" parameterType="java.lang.Integer">
+        delete from movice where mid=#{mid}
+    </delete>
+    <update id="setMovice" parameterType="java.lang.Integer">
+        update movice set recommend=1 where mid=#{mid}
+    </update>
+    <update id="normalMovice" parameterType="java.lang.Integer">
+        update movice set recommend=0 where mid=#{mid}
+    </update>
+    <select id="findMoviceById" parameterType="java.lang.Integer" resultType="com.jxau.domain.Movice">
+        select * from movice where mid=#{mid}
+    </select>
+    <update id="changeMovice" parameterType="com.jxau.domain.Movice">
+        update movice set mname=#{mname},movice_path=#{movice_path},movice_cover=#{movice_cover},introduction=#{introduction}
+         where mid=#{mid}
+    </update>
+</mapper>
